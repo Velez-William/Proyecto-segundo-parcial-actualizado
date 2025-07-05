@@ -1,5 +1,6 @@
 ### Sistema de Gestión de Evaluaciones Académicas
-##nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
+##nombre participante:  [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
+
 #Descripción: 
 
 
