@@ -35,22 +35,22 @@ JSON: Formato de intercambio de datos para la funcionalidad de guardar y cargar 
 ## Estructura del Proyecto
 El proyecto está organizado en una estructura modular para facilitar la comprensión y el mantenimiento:
 
-├── src/
-│   ├── UI/
-│   │   └── vntEvaluacion.py           # Define la interfaz de usuario (generado desde .ui)
-│   ├── datos/
-│   │   ├── conexion.py                 # Gestiona la conexión a la base de datos SQL Server
-│   │   ├── evaluacion_dao.py           # Objeto de Acceso a Datos (DAO) para operaciones CRUD en la BD
-│   │   └── insertar_datos_ejemplo.py   # Script para poblar la base de datos con datos de ejemplo
-│   ├── dominio/
-│   │   ├── evaluacion.py               # Clase base abstracta para todas las evaluaciones
-│   │   ├── examen.py                   # Implementación específica para Exámenes
-│   │   ├── presentacion.py             # Implementación específica para Presentaciones
-│   │   └── trabajo.py                  # Implementación específica para Trabajos
-│   └── servicio/
-│       ├── gestor_evaluaciones.py      # Lógica de negocio para gestionar colecciones de evaluaciones
-│       └── persona.py                  # Clase principal de la aplicación, conecta la UI con la lógica de negocio
-└── README.md
+#├── src/
+#│   ├── UI/
+#│   │   └── vntEvaluacion.py           # Define la interfaz de usuario (generado desde .ui)
+#│   ├── datos/
+#│   │   ├── conexion.py                 # Gestiona la conexión a la base de datos SQL Server
+#│   │   ├── evaluacion_dao.py           # Objeto de Acceso a Datos (DAO) para operaciones CRUD en la BD
+#│   │   └── insertar_datos_ejemplo.py   # Script para poblar la base de datos con datos de ejemplo
+#│   ├── dominio/
+#│   │   ├── evaluacion.py               # Clase base abstracta para todas las evaluaciones
+#│   │   ├── examen.py                   # Implementación específica para Exámenes
+#│   │   ├── presentacion.py             # Implementación específica para Presentaciones
+#│   │   └── trabajo.py                  # Implementación específica para Trabajos
+$│   └── servicio/
+#│       ├── gestor_evaluaciones.py      # Lógica de negocio para gestionar colecciones de evaluaciones
+#│       └── persona.py                  # Clase principal de la aplicación, conecta la UI con la lógica de negocio
+#└── README.md
 Explicación del Funcionamiento del Proyecto (con Código)
 ##1. Modelo de dominio (src/domain/)
 Las clases en el directorio src/dominio/ definen la estructura de los datos del sistema. Evaluacion es la clase base, y Examen, Trabajo, Presentacion heredan de ella, añadiendo atributos y lógicas específicas.
