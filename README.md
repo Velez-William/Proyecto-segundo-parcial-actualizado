@@ -1,155 +1,8 @@
-## Project Title: Sistema de Gestión de Evaluaciones Académicas
-
-Descripción:
-
-"Este proyecto implementa una aplicación de escritorio para gestionar evaluaciones académicas, incluyendo diferentes tipos como exámenes, tareas y presentaciones. Permite a los usuarios crear, ver, editar y eliminar evaluaciones, y proporciona estadísticas basadas en los tipos de evaluación").
-
-#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
-
-Características
-Basándome en los archivos persona.pyy vntEvaluacion.py, puedo identificar estas características:
-
-Operaciones CRUD para evaluaciones: crear, leer (enumerar), actualizar, eliminar evaluaciones.
-
-Tipos de evaluación: Admite diferentes tipos de evaluaciones:
-
-Exámenes ( Examen)
-
-Tareas ( Trabajo)
-
-Presentaciones ( Presentacion)
-
-Integración de bases de datos: Conserva los datos de evaluación en una base de datos de SQL Server. (Mencionado en conexion.py[ Nombre del servidor], evaluacion_dao.py[Nombre del servidor], [Nombre del servidor gestor_evaluaciones.py]).
-
-Estadísticas: Muestra estadísticas agrupadas por tipo de evaluación (basadas en groupBox_por_tipoy textEdit_estadisticasen vntEvaluacion.py).
-
-Validación de datos: incluye validación de campos de entrada (por ejemplo, rango de puntuación, duración, números de página, etc.).
-
-Operaciones con archivos: Guardar y cargar evaluaciones desde archivos JSON. (Mencionado en persona.py)
-
-Tecnologías utilizadas
-Python: El lenguaje de programación principal.
-
-PySide6: Para la interfaz gráfica de usuario (GUI).
-
-pyodbc: para conectarse a SQL Server.
-
-SQL Server: el sistema de base de datos utilizado para la persistencia.
-
-JSON: para almacenamiento de datos basado en archivos (guardar/cargar).
-
-Estructura del proyecto
-Puedo ayudarte a explicar el propósito de cada directorio y archivo clave:
-
-src/:Contiene el código fuente principal.
-
-UI/:
-
-vntEvaluacion.py: (Generado a partir de vntEvaluacion.ui) Define el diseño de la GUI y los widgets para la ventana de administración de evaluación.
-
-datos/:Maneja la interacción con la base de datos.
-
-conexion.py:Administra la conexión de la base de datos a SQL Server.
-
-evaluacion_dao.py:Objeto de acceso a datos (DAO) para realizar operaciones CRUD en evaluaciones en la base de datos.
-
-insertar_datos_ejemplo.py:Script para rellenar la base de datos con datos de evaluación de ejemplo.
-
-dominio/:Contiene los modelos de dominio (lógica de negocio).
-
-evaluacion.py:Clase base para todos los tipos de evaluación.
-
-examen.py: Representa un examen, heredando de Evaluacion.
-
-presentacion.py: Representa una presentación, heredando de Evaluacion.
-
-trabajo.py: Representa una Asignación (Trabajo), heredando de Evaluacion.
-
-servicio/:Contiene la lógica de la capa de servicio.
-
-gestor_evaluaciones.py:Administra la recopilación de evaluaciones e interactúa con el EvaluacionDAO.
-
-persona.py:(Renombrado MainWindowen los comentarios) La lógica principal de la aplicación, que conecta la interfaz de usuario con la interfaz de usuario GestorEvaluacionesy maneja las interacciones del usuario.
-
-Configuración e instalación
-Prerrequisitos:
-
-Python 3.x
-
-SQL Server (con la GestionEvaluacionesbase de datos y Evaluacionesel usuario, tal como se configuró en conexion.py).
-
-Controlador ODBC 17 para SQL Server.
-
-Pasos de instalación:
-
-Clonar el repositorio:git clone <your-repo-url>
-
-Navegue hasta el directorio del proyecto:cd <project-directory>
-
-Crear un entorno virtual (recomendado):python -m venv venv
-
-Activar el entorno virtual:
-
-Ventanas:.\venv\Scripts\activate
-
-macOS/Linux:source venv/bin/activate
-
-Instalar dependencias:pip install PySide6 pyodbc
-
-Configuración de la base de datos:
-
-Asegúrese de que su servidor SQL esté ejecutándose.
-
-Crea una base de datos llamada GestionEvaluaciones.
-
-Cree un usuario Evaluacionescon contraseña 1234y otórguele los permisos necesarios en la GestionEvaluacionesbase de datos (o ajústelo conexion.pycon sus credenciales).
-
-Ejecutar src/datos/insertar_datos_ejemplo.pypara llenar la base de datos con datos iniciales: python src/datos/insertar_datos_ejemplo.py(este script también limpia los datos existentes antes de insertarlos).
-
-Cómo correr
-Desde el directorio raíz del proyecto, ejecute la aplicación principal:python src/servicio/persona.py
-
-Uso
-(Describe cómo utilizar la aplicación, por ejemplo, "Una vez que se inicia la aplicación, puedes utilizar el botón 'Crear' para agregar nuevas evaluaciones, 'Modificar' para editar las existentes, etc. Selecciona un tipo de evaluación del menú desplegable para ver campos específicos.")
-
-Contribuyendo
-(Sección estándar para contribuciones, si corresponde)
-
-Licencia
-(por ejemplo, licencia MIT)
-
-Por favor hágamelo saber:
-
-¿Quieres que genere el README.mdcontenido completo con los detalles que he descrito?
-
-¿Hay alguna sección específica que desea agregar, eliminar o desarrollar?
-
-¿Tiene instrucciones para crear la interfaz de usuario a partir del .uiarchivo (si vntEvaluacion.pyde hecho se genera)? (por ejemplo, pyside6-uic vntEvaluacion.ui -o vntEvaluacion.py)
-
-¿Tienes alguna captura de pantalla (además de la que proporcionaste, que parece ser un diseño de interfaz de usuario) de la aplicación en ejecución que te gustaría incluir?
-
-¿Quiénes son los desarrolladores? (Lo vi [Tu Nombre 1], [Tu Nombre 2]en persona.py)
-
-Una vez que tenga esta información, puedo generar una versión más completa y personalizada README.mdpara su proyecto de GitHub.
-
-
-
-
-
-
-
-cosas explicativa de mi proyecto y si quiere algo de codigo para expliacr el funcionamiento del proyecto
-
-
-
-Ver razonamiento
-Aquí tienes una propuesta de README.md con explicaciones detalladas y ejemplos de código para tu "Sistema de Gestión de Evaluaciones Académicas", diseñado para guiar a cualquier persona que explore tu repositorio en GitHub.
-
-Sistema de Gestión de Evaluaciones Académicas
+### Sistema de Gestión de Evaluaciones Académicas
 Descripción del Proyecto
 Este proyecto implementa un sistema de gestión de evaluaciones académicas como una aplicación de escritorio, desarrollado en Python con PySide6 para la interfaz gráfica de usuario. Su objetivo principal es facilitar la administración de diferentes tipos de evaluaciones (Exámenes, Trabajos, Presentaciones), permitiendo a los usuarios crear, ver, modificar y eliminar registros. Además, el sistema ofrece funcionalidades para el almacenamiento persistente de datos en una base de datos SQL Server y la generación de estadísticas por tipo de evaluación.
 
-Características Principales
+## Características Principales
 Gestión Completa de Evaluaciones (CRUD): Permite la creación, lectura (listado), actualización y eliminación de registros de evaluaciones.
 
 Diversidad de Tipos de Evaluación: Soporta y diferencia entre los siguientes tipos de evaluaciones, cada uno con atributos específicos:
@@ -168,7 +21,7 @@ Validación de Datos: Incorpora validaciones en la entrada de datos para asegura
 
 Operaciones con Archivos: Capacidad para guardar y cargar datos de evaluaciones desde archivos JSON, lo que permite la portabilidad de los datos.
 
-Tecnologías Utilizadas
+## Tecnologías Utilizadas
 Python: Lenguaje de programación principal del proyecto.
 
 PySide6: Framework para el desarrollo de la interfaz gráfica de usuario (GUI).
@@ -179,7 +32,7 @@ SQL Server: Sistema de gestión de bases de datos relacionales utilizado para la
 
 JSON: Formato de intercambio de datos para la funcionalidad de guardar y cargar archivos.
 
-Estructura del Proyecto
+## Estructura del Proyecto
 El proyecto está organizado en una estructura modular para facilitar la comprensión y el mantenimiento:
 
 ├── src/
@@ -199,14 +52,14 @@ El proyecto está organizado en una estructura modular para facilitar la compren
 │       └── persona.py                  # Clase principal de la aplicación, conecta la UI con la lógica de negocio
 └── README.md
 Explicación del Funcionamiento del Proyecto (con Código)
-1. Modelo de dominio (src/domain/)
+##1. Modelo de dominio (src/domain/)
 Las clases en el directorio src/dominio/ definen la estructura de los datos del sistema. Evaluacion es la clase base, y Examen, Trabajo, Presentacion heredan de ella, añadiendo atributos y lógicas específicas.
 
 Ejemplo: src/dominio/evaluacion.py (Clase Base)
 
 Pitón
 
-# src/dominio/evaluacion.py
+## src/dominio/evaluacion.py
 from datetime import date
 
 class Evaluacion:
@@ -242,7 +95,7 @@ Ejemplo: src/dominio/examen.py (Clase Heredada)
 
 Pitón
 
-# src/dominio/examen.py
+## src/dominio/examen.py
 from src.dominio.evaluacion import Evaluacion
 from datetime import date
 
@@ -260,14 +113,14 @@ class Examen(Evaluacion):
         # Lógica específica para calcular la nota de un examen
         # Este es un ejemplo, se puede ajustar la fórmula.
         return self.puntaje * (self.num_preguntas / 100)
-2. Conexión a la Base de Datos (src/datos/conexion.py)
+## 2. Conexión a la Base de Datos (src/datos/conexion.py)
 La clase Conexion maneja la conexión singleton a SQL Server, asegurando que solo haya una instancia de conexión a la vez.
 
 Ejemplo:src/datos/conexion.py
 
 Pitón
 
-# src/datos/conexion.py
+## src/datos/conexion.py
 import pyodbc as bd
 
 class Conexion:
@@ -308,14 +161,14 @@ class Conexion:
             cls._conexion.close()
             cls._conexion = None
             print("Conexión a SQL Server cerrada.")
-3. Objeto de Acceso a Datos (src/datos/evaluacion_dao.py)
+## 3. Objeto de Acceso a Datos (src/datos/evaluacion_dao.py)
 EvaluacionDAO es responsable de las operaciones de base de datos para los objetos Evaluacion y sus subclases.
 
 Ejemplo: src/datos/evaluacion_dao.py (Fragmento para Cargar Evaluaciones)
 
 Pitón
 
-# src/datos/evaluacion_dao.py
+## src/datos/evaluacion_dao.py
 import pyodbc
 from src.datos.conexion import Conexion
 from src.dominio.evaluacion import Evaluacion
@@ -375,14 +228,14 @@ class EvaluacionDAO:
         finally:
             if cursor:
                 cursor.close()
-4. Gestor de Evaluaciones (src/servicio/gestor_evaluaciones.py)
+## 4. Gestor de Evaluaciones (src/servicio/gestor_evaluaciones.py)
 El GestorEvaluaciones actúa como la capa de servicio, coordinando entre la lógica de la aplicación y el DAO.
 
 Ejemplo: src/servicio/gestor_evaluaciones.py (Fragmento para Agregar una Evaluación)
 
 Pitón
 
-# src/servicio/gestor_evaluaciones.py
+## src/servicio/gestor_evaluaciones.py
 from src.dominio.evaluacion import Evaluacion
 from src.datos.conexion import Conexion
 from src.datos.evaluacion_dao import EvaluacionDAO
@@ -431,14 +284,14 @@ class GestorEvaluaciones:
         print(f"Cargadas {len(self.evaluaciones)} evaluaciones desde la base de datos.")
 
     # ... otros métodos como eliminar_evaluacion, actualizar_evaluacion, etc.
-5. Lógica Principal de la Aplicación (src/servicio/persona.py)
+## 5. Lógica Principal de la Aplicación (src/servicio/persona.py)
 La clase PersonaServicio (anteriormente MainWindow en los comentarios de tu código) es la que orquesta la interacción entre la interfaz de usuario y la lógica de negocio.
 
 Ejemplo: src/servicio/persona.py (Fragmento para Crear una Evaluación)
 
 Pitón
 
-# src/servicio/persona.py
+## src/servicio/persona.py
 from PySide6.QtWidgets import (QMainWindow, QMessageBox, QTableWidgetItem,
                                QFileDialog, QApplication, QHeaderView, QTableWidget)
 from PySide6.QtCore import QDate
@@ -508,19 +361,18 @@ class PersonaServicio(QMainWindow):
             QMessageBox.critical(self, "Error", f"Ocurrió un error inesperado: {e}")
 
     # ... otros métodos como cargar_evaluaciones_en_tabla, actualizar_estadisticas, etc.
-Configuración e instalación
+## Configuración e instalación
 Para configurar y ejecutar este proyecto, sigue estos pasos:
 
-Prerrequisitos
+##Prerrequisitos
 Python 3.x: Asegúrate de tener Python instalado en tu sistema.
 
 SQL Server: Necesitarás una instancia de SQL Server en ejecución. El proyecto está configurado para conectarse a WILLIAM-PC\VELEZSQLSERVER con la base de datos GestionEvaluaciones y un usuario Evaluaciones con contraseña 1234. Deberás ajustar estos valores en src/datos/conexion.py si tu configuración es diferente.
-![image](https://github.com/user-attachments/assets/8109a149-c2f2-460b-967f-100f9c3032c7)
-
+![image](https://github.com/user-attachments/assets/41e6c9bb-c211-4cec-affe-6bcdd228d290)
 
 ODBC Driver 17 for SQL Server: Este driver es necesario para que pyodbc pueda comunicarse con SQL Server. Puedes descargarlo e instalarlo desde el sitio oficial de Microsoft.
 
-Pasos de Instalación
+#Pasos de Instalación
 Clonar el Repositorio:
 
 Intento
@@ -562,10 +414,11 @@ Una vez que hayas completado la configuración e instalación, puedes ejecutar l
 Intento
 
 python src/servicio/persona.py
-Uso del Sistema
+#Uso del Sistema
 Al iniciar la aplicación, se mostrará la ventana principal del sistema de gestión de evaluaciones.
 
-![image](https://github.com/user-attachments/assets/b06c8e41-0d34-4653-a42b-a0f9917ba20d)
+![image](https://github.com/user-attachments/assets/e33232c6-ae9c-46c4-97e5-be4115e93109)
+
 
 Puedes utilizar los campos de entrada y el selector de tipo de evaluación para ingresar los detalles de una nueva evaluación.
 
