@@ -1,5 +1,6 @@
 # src/datos/conexion.py
 import sys
+#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
 import pyodbc as bd
 
 class Conexion:

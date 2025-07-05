@@ -1,5 +1,5 @@
 # src/servicio/persona.py
-
+#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
 import json
 import re # Necesario para validaciones si usas expresiones regulares
 from datetime import date

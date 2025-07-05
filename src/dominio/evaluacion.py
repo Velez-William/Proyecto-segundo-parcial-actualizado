@@ -1,4 +1,5 @@
 # src/dominio/evaluacion.py
+#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
 from datetime import date
 
 class Evaluacion:

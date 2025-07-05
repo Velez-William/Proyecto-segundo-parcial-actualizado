@@ -1,5 +1,6 @@
 # src/servicio/gestor_evaluaciones.py
 
+#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
 from src.dominio.evaluacion import Evaluacion
 from src.dominio.examen import Examen
 from src.dominio.trabajo import Trabajo

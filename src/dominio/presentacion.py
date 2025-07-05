@@ -1,4 +1,5 @@
 # src/dominio/presentacion.py
+#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
 from src.dominio.evaluacion import Evaluacion
 from datetime import date
 

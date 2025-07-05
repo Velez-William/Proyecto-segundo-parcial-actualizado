@@ -1,5 +1,5 @@
 # src/datos/evaluacion_dao.py
-
+#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
 import pyodbc
 from src.datos.conexion import Conexion # <--- Importación corregida
 from src.dominio.evaluacion import Evaluacion

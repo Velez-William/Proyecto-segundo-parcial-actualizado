@@ -1,5 +1,5 @@
 # main.py
-
+#nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
 import sys
 from PySide6.QtWidgets import QApplication
 
