@@ -1,6 +1,9 @@
 ### Sistema de Gestión de Evaluaciones Académicas
-Descripción del Proyecto
-Este proyecto implementa un sistema de gestión de evaluaciones académicas como una aplicación de escritorio, desarrollado en Python con PySide6 para la interfaz gráfica de usuario. Su objetivo principal es facilitar la administración de diferentes tipos de evaluaciones (Exámenes, Trabajos, Presentaciones), permitiendo a los usuarios crear, ver, modificar y eliminar registros. Además, el sistema ofrece funcionalidades para el almacenamiento persistente de datos en una base de datos SQL Server y la generación de estadísticas por tipo de evaluación.
+##nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
+#Descripción: 
+
+
+"Este proyecto implementa un sistema de gestión de evaluaciones académicas como una aplicación de escritorio, desarrollado en Python con PySide6 para la interfaz gráfica de usuario. Su objetivo principal es facilitar la administración de diferentes tipos de evaluaciones (Exámenes, Trabajos, Presentaciones), permitiendo a los usuarios crear, ver, modificar y eliminar registros. Además, el sistema ofrece funcionalidades para el almacenamiento persistente de datos en una base de datos SQL Server y la generación de estadísticas por tipo de evaluación".
 
 ## Características Principales
 Gestión Completa de Evaluaciones (CRUD): Permite la creación, lectura (listado), actualización y eliminación de registros de evaluaciones.
