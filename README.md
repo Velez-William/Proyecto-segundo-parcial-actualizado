@@ -1,7 +1,11 @@
-Project Title: Sistema de Gestión de Evaluaciones Académicas
-Descripción
-Explique brevemente la función de este sistema. (Por ejemplo, "Este proyecto implementa una aplicación de escritorio para gestionar evaluaciones académicas, incluyendo diferentes tipos como exámenes, tareas y presentaciones. Permite a los usuarios crear, ver, editar y eliminar evaluaciones, y proporciona estadísticas basadas en los tipos de evaluación").
+## Project Title: Sistema de Gestión de Evaluaciones Académicas
+
+Descripción:
+
+"Este proyecto implementa una aplicación de escritorio para gestionar evaluaciones académicas, incluyendo diferentes tipos como exámenes, tareas y presentaciones. Permite a los usuarios crear, ver, editar y eliminar evaluaciones, y proporciona estadísticas basadas en los tipos de evaluación").
+
 #nombre participante [ADRIANA BETANCOURTH, LISSETTE DANIELA MERO, WILLIAM VELEZ BARRE]
+
 Características
 Basándome en los archivos persona.pyy vntEvaluacion.py, puedo identificar estas características:
 
@@ -511,6 +515,8 @@ Prerrequisitos
 Python 3.x: Asegúrate de tener Python instalado en tu sistema.
 
 SQL Server: Necesitarás una instancia de SQL Server en ejecución. El proyecto está configurado para conectarse a WILLIAM-PC\VELEZSQLSERVER con la base de datos GestionEvaluaciones y un usuario Evaluaciones con contraseña 1234. Deberás ajustar estos valores en src/datos/conexion.py si tu configuración es diferente.
+![image](https://github.com/user-attachments/assets/8109a149-c2f2-460b-967f-100f9c3032c7)
+
 
 ODBC Driver 17 for SQL Server: Este driver es necesario para que pyodbc pueda comunicarse con SQL Server. Puedes descargarlo e instalarlo desde el sitio oficial de Microsoft.
 
@@ -558,6 +564,8 @@ Intento
 python src/servicio/persona.py
 Uso del Sistema
 Al iniciar la aplicación, se mostrará la ventana principal del sistema de gestión de evaluaciones.
+
+![image](https://github.com/user-attachments/assets/b06c8e41-0d34-4653-a42b-a0f9917ba20d)
 
 Puedes utilizar los campos de entrada y el selector de tipo de evaluación para ingresar los detalles de una nueva evaluación.
 
